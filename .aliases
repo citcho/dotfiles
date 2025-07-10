@@ -1,0 +1,18 @@
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias cb='xsel --clipboard --input'
+alias cl='clear'
+
+alias gpl='git pull'
+alias gsd='git switch develop'
+alias gll='git log --oneline'
+alias gs='git switch'
+alias gst='git status'
+alias gb='git branch'
+alias gcm='git commit -m $1'
+alias gau='git add -u'
+alias nb='git checkout -b $1'
+
+alias delimg='docker stop $(docker ps -q); docker rm $(docker ps -q -a); docker rmi -f $(docker images -q)'
+alias delvol='docker volume ls -qf dangling=true | xargs -r docker volume rm docker system prune --volumes'
