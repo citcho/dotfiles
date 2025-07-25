@@ -34,6 +34,15 @@ link_to_homedir() {
     command mkdir "$HOME/.config"
   fi
   command ln -snf "$script_dir/starship.toml" "$HOME/.config/starship.toml"
+
+  local vscode_settings_src="$script_dir/vscode/settings.json"
+  local vscode_settings_dest="$HOME/.vscode-server/data/Machine/settings.json"
+  if [ -f "$vscode_settings_src" ]; then
+    if [ ! -d "$(dirname "$vscode_settings_dest")" ]; then
+      command mkdir -p "$(dirname "$vscode_settings_dest")"
+    fi
+    command ln -snf "$vscode_settings_src" "$vscode_settings_dest"
+  fi
 }
 
 while [ $# -gt 0 ];do

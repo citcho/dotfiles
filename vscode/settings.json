@@ -1,0 +1,50 @@
+ 
+{
+  "editor.fontFamily": "Hack Nerd Font, Consolas, 'Courier New', monospace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.golden": "json"
+  },
+  "[json]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize"
+  },
+  "[python]": {
+        "editor.wordBasedSuggestions": "matchingDocuments"
+    },
+  "python.linting.enabled": true,
+  "python.languageServer": "Pylance",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true
+  },
+  "go.goroot": "${env:HOME}/.local/share/aquaproj-aqua/pkgs/http/golang.org/dl/go1.24.5.linux-amd64.tar.gz/go",
+  "go.useLanguageServer": true,
+  "git.allowNoVerifyCommit": true,
+  "editor.wordWrap": "on",
+  "editor.indentSize": "tabSize",
+  "terminal.integrated.scrollback": 7000,
+  "workbench.editor.wrapTabs": true,
+  "background.fullscreen": {
+    "images": ["https://media.tenor.com/hD56X-Q5AzMAAAAj/gopher-shaking.gif"],
+    "opacity": 0.1,
+    "size": "10%",
+    "position": "100% 99%",
+    "interval": 0,
+    "random": true
+  },
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "必ず日本語で記述してください"
+    },
+    {
+      "text": "コミットメッセージは、最初にConventional Commitsに則って記述してください"
+    },
+    {
+      "text": "その後変更内容を簡潔に記述してください"
+    }
+  ]
+}
