@@ -46,7 +46,6 @@ link_to_homedir() {
 }
 
 # TODO: brewとaquaのインストール
-# TODO: git configの設定
 
 while [ $# -gt 0 ];do
   case ${1} in
