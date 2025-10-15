@@ -14,9 +14,9 @@ link_to_homedir() {
   fi
 
   local script_dir="$(cd "$(dirname "$0")" && pwd -P)"
-  local dotdir=$(dirname ${script_dir})
-  if [[ "$HOME" != "$dotdir" ]];then
-    for f in $dotdir/.??*; do
+  # local dotdir=$(dirname ${script_dir})
+  if [[ "$HOME" != "$script_dir" ]];then
+    for f in $script_dir/.??*; do
       [[ `basename $f` == ".git" ]] && continue
       if [[ -L "$HOME/`basename $f`" ]];then
         command rm -f "$HOME/`basename $f`"
@@ -44,6 +44,9 @@ link_to_homedir() {
     command ln -snf "$vscode_settings_src" "$vscode_settings_dest"
   fi
 }
+
+# TODO: brewとaquaのインストール
+# TODO: git configの設定
 
 while [ $# -gt 0 ];do
   case ${1} in
