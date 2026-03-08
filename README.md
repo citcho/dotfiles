@@ -29,16 +29,6 @@ exec zsh
 
 ---
 
-## Available commands
-
-```sh
-make        # dotfiles setup
-make link   # create symlinks
-make clean  # remove symlinks
-```
-
----
-
 ## zsh environment
 
 ```
