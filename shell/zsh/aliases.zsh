@@ -1,9 +1,13 @@
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias cb='xsel --clipboard --input'
+# zsh
 alias cl='clear'
+alias ls="eza"
+alias ll="eza -al"
+alias la="eza -a"
+alias cat="bat"
+alias grep="rg"
+alias cb='xsel --clipboard --input'
 
+# git
 alias gpl='git pull'
 alias gsd='git switch develop'
 alias gll='git log --oneline'
@@ -14,5 +18,6 @@ alias gcm='git commit -m $1'
 alias gau='git add -u'
 alias nb='git checkout -b $1'
 
+# docker
 alias delimg='docker stop $(docker ps -q); docker rm $(docker ps -q -a); docker rmi -f $(docker images -q)'
 alias delvol='docker volume ls -qf dangling=true | xargs -r docker volume rm docker system prune --volumes'
